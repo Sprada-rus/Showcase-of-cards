@@ -5,6 +5,7 @@ import Pagination from "../Pagination/Pagination.tsx";
 import QuotesBlock from "../QuotesBlock";
 import clsx from "clsx";
 import './main.css';
+import TodosBlock from "../TodosBlock";
 
 interface ListBlockProps {
     type?: string,
@@ -53,8 +54,8 @@ export default function ListBlock(props: ListBlockProps) {
         />}
         {pending && <Box sx={{display: 'flex', justifyContent: 'center'}}><CircularProgress/></Box>}
         {!pending && <div className={clsx('list-items', {pair: maxCards % 2 === 0})}>
-            {type === 'quotes' && items?.quotes && <QuotesBlock list={items?.quotes}/>}
-            {type === 'todos' && items?.todos && <></>}
+            {type === 'quotes' && items?.quotes && <QuotesBlock list={items.quotes}/>}
+            {type === 'todos' && items?.todos && <TodosBlock list={items.todos}/>}
         </div>}
     </>
 }

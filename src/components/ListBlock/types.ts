@@ -18,3 +18,7 @@ export interface QuotesProps {
     quote: string,
     author: string
 }
+
+export interface ItemBlockListProps {
+    list: QuotesProps[]|TodoProps[];
+}

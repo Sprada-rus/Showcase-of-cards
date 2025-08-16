@@ -4,6 +4,8 @@
     gap: 1rem;
     width: 80vw;
     margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media (min-width: 900px) {

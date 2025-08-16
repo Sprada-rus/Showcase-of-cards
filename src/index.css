@@ -44,6 +44,13 @@ body {
 #root {
   max-width: 900px;
   width: 100%;
+  margin: 0 1rem;
+}
+
+@media (min-width: 900px) {
+  #root {
+    margin: 0;
+  }
 }
 
 @media (prefers-color-scheme: light) {

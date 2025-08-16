@@ -1,13 +1,10 @@
-import type {QuotesProps} from "../ListBlock/types.ts";
+import type {ItemBlockListProps, QuotesProps} from "../ListBlock/types.ts";
 import Card from "../Card";
 
-interface QuotesBlockProps {
-    list: QuotesProps[];
-}
-
-export default function QuotesBlock(props: QuotesBlockProps) {
+export default function QuotesBlock(props: ItemBlockListProps) {
+    const list = props.list as QuotesProps[];
     return <>
-        {props.list.map((quote) =>
+        {list.map((quote) =>
         <Card key={quote.id}>
             <p>
                 {quote.quote}
