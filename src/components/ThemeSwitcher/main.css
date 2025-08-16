@@ -1,0 +1,40 @@
+:root[main-theme=dark] {
+    --active-item: #fff;
+    --toggle: #213547;
+    --border-color: #fff
+}
+
+:root[main-theme=light] {
+    --active-item: #fff;
+    --toggle: #ffcc33;
+    --border-color: #242424;
+}
+
+.theme-switcher {
+    display: flex;
+    gap: 2rem;
+    padding: .5rem;
+    border-radius: 3rem;
+    width: fit-content;
+    position: relative;
+    border: 1px solid var(--border-color);
+    margin: 1rem auto;
+    overflow: hidden;
+}
+
+.theme-switcher > .active {
+    color: var(--active-item);
+    transition: color .2s;
+}
+
+.theme-switcher__toggle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    z-index: -1;
+    background-color: var(--toggle);
+    border-radius: 100% ;
+    transition: transform .3s, background-color .2s;
+}

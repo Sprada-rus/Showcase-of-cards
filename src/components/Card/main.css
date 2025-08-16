@@ -1,0 +1,17 @@
+:root[main-theme=dark] {
+    --card-border-color: #8c8c8c;
+    --card-bg: #505050;
+}
+
+:root[main-theme=light] {
+    --card-border-color: #242424;
+    --card-bg: #f1f1f1;
+}
+
+.card {
+    border-radius: 0.5rem;
+    outline: 2px var(--card-border-color);
+    background-color: var(--card-bg);
+    padding: .5rem 1rem;
+    transition: background-color .3s, border-color .3s;
+}

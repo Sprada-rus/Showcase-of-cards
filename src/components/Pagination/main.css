@@ -1,0 +1,19 @@
+.pagination-block {
+    display: flex;
+    gap: .5rem;
+    margin: 1rem auto;
+    justify-content: center;
+}
+
+.pagination-item {
+    min-width: 24px;
+    text-align: center;
+    padding: .5rem;
+    transition: background-color .2s, color .2s;
+}
+
+.pagination-item.active {
+    border-radius: 40%;
+    background-color: var(--text);
+    color: var(--bg-color);
+}
