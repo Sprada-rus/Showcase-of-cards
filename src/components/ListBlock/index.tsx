@@ -20,6 +20,10 @@ export default function ListBlock(props: ListBlockProps) {
     const [pending, setPending] = useState(false);
 
     useEffect(() => {
+        setPageNum(1);
+    }, [type]);
+
+    useEffect(() => {
         if (!type) return;
         setPending(true);
 
