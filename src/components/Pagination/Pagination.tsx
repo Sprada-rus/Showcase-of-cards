@@ -10,8 +10,6 @@ interface PaginationProps {
     onNext: () => void;
 }
 
-
-
 export default function Pagination(props: PaginationProps) {
     const {onChange, currentPage, count, onPrev, onNext} = props;
 
